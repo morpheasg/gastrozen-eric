@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+
+# ERiC SDK (darf nicht ins Repo - Lizenz!)
+eric_lib/*.so
+eric_lib/*.dll
+eric_lib/plugins/
+
+# Zertifikate
+certs/*.pfx
+certs/*.p12
+certs/*.pem
+
+# Logs
+logs/*.log
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+.docker/
