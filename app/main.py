@@ -33,8 +33,7 @@ async def lifespan(app: FastAPI):
 
     yield
 
-    if eric._initialized:
-        eric.shutdown()
+    eric.shutdown()
 
 
 app = FastAPI(
