@@ -17,11 +17,15 @@ RUN pip install --no-cache-dir -r requirements.txt
 # App-Code
 COPY app/ ./app/
 
-# Verzeichnisse
-RUN mkdir -p /app/eric_lib /app/certs /app/logs
+# ERiC SDK Libraries (Linux x86_64)
+COPY eric_lib/linux64/*.so /app/eric_lib/
+COPY eric_lib/linux64/plugins/*.so /app/eric_lib/plugins/
 
-# ERiC Library-Pfad
-ENV LD_LIBRARY_PATH="/app/eric_lib"
+# Verzeichnisse
+RUN mkdir -p /app/certs /app/logs
+
+# ERiC Library-Pfad — BEIDE Verzeichnisse
+ENV LD_LIBRARY_PATH="/app/eric_lib:/app/eric_lib/plugins"
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 

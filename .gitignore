@@ -9,10 +9,17 @@ build/
 venv/
 .venv/
 
-# ERiC SDK (darf nicht ins Repo - Lizenz!)
-eric_lib/*.so
-eric_lib/*.dll
-eric_lib/plugins/
+# ERiC SDK Binaries (Lizenz verbietet Weitergabe!)
+eric_lib/**/*.so
+eric_lib/**/*.dll
+eric_lib/**/plugins/
+eric_lib/win64/
+eric_lib/linux64/
+
+# ERiC Test-Daten
+eric_lib/*.xml
+eric_lib/*.pfx
+eric_lib/*.bat
 
 # Zertifikate
 certs/*.pfx
